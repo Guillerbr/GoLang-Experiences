@@ -12,9 +12,9 @@ func main() {
 
 	var c string
 
-	d := euuu;
-	e := eooo;
-	f :=  iuuu;
+	d := 10
+	e := "eooo"
+	f :=  false
 	
 	c = "Guiller";
 	
@@ -23,9 +23,9 @@ func main() {
 
 	fmt.Println(c);
 
-	fmt.Println("%v \n", d);
-	fmt.Println("%v \n", e);
-	fmt.Println("%v \n", f);
+	fmt.Println("%T \n", d);
+	fmt.Println("%T \n", e);
+	fmt.Println("%T \n", f);
 
 
 	
