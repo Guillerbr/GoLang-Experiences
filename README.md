@@ -25,3 +25,6 @@ Para testar entre na pasta do projeto Bee Framework
 
 
 
+# Links 
+
+https://tour.golang.org/welcome/1
