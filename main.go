@@ -1,6 +1,5 @@
 package main
 
-
 import (
 	"fmt"
 	"net/http"
@@ -13,13 +12,24 @@ func main() {
 	// fmt.Println("%v", resultado);
 
 	// fmt.Println("Hello GO");
-	res, err := http.Get("https://google.com")
+	var current string = 27321010
+
+	fmt.Println(current);
+
+
+	defer resp.Body.Close()
+
+		body, err := ioutil.ReadAll(resp.Body)
+
+		if err != nil {
+			fmt.Println("Error")
+		}
+
+	res, err := http.Get("https://viacep.com.br/ws/" + current + "/json/")
 	if err != nil {
-		log.Fatal(err.Error());
+		log.Fatal(err.Error())
 	}
 
-    fmt.Println(res.header);
-	
-	}
+	fmt.Println(res.header)
 
-
+}
