@@ -2,9 +2,14 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	//"math/operations"
 )
+
+type CepValidade struct {
+	current string
+}
 
 func main() {
 
@@ -12,24 +17,23 @@ func main() {
 	// fmt.Println("%v", resultado);
 
 	// fmt.Println("Hello GO");
-	var current string = 27321010
+	var current = 27321010
 
-	fmt.Println(current);
+	fmt.Println(current)
 
+	//defer resp.Body.Close()
 
-	defer resp.Body.Close()
+	//body, err := ioutil.ReadAll(resp.Body)
 
-		body, err := ioutil.ReadAll(resp.Body)
-
-		if err != nil {
-			fmt.Println("Error")
-		}
+	// if err != nil {
+	// 	fmt.Println("Error")
+	// }
 
 	res, err := http.Get("https://viacep.com.br/ws/" + current + "/json/")
 	if err != nil {
 		log.Fatal(err.Error())
 	}
 
-	fmt.Println(res.header)
+	fmt.Println(res.Body)
 
 }
