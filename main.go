@@ -16,7 +16,6 @@ func main() {
 	// resultado = math.Soma(2, 3)
 	// fmt.Println("%v", resultado);
 
-	// fmt.Println("Hello GO");
 	var current = 27321010
 
 	fmt.Println(current)
