@@ -16,18 +16,9 @@ func main() {
 	// resultado = math.Soma(2, 3)
 	// fmt.Println("%v", resultado);
 
-	
 	var current = 27321010
 
 	fmt.Println(current)
-
-	//defer resp.Body.Close()
-
-	//body, err := ioutil.ReadAll(resp.Body)
-
-	// if err != nil {
-	// 	fmt.Println("Error")
-	// }
 
 	res, err := http.Get("https://viacep.com.br/ws/" + current + "/json/")
 	if err != nil {
